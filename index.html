@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SV GROUP Cybersecurity Lab</title>
+</head>
+<body>
+  <h1>SV GROUP Cybersecurity Lab</h1>
+  <p>मेरा पहला सुरक्षित अभ्यास!</p>
+
+  <label for="testPassword">टेस्ट पासवर्ड:</label>
+  <input id="testPassword" type="password"
+         placeholder="काल्पनिक पासवर्ड लिखें">
+
+  <button onclick="checkPassword()">जाँचें</button>
+  <p id="result"></p>
+
+  <script>
+    function checkPassword() {
+      const password =
+        document.getElementById("testPassword").value;
+
+      const result = document.getElementById("result");
+
+      if (password.length >= 12) {
+        result.textContent =
+          "अच्छी लंबाई! बाकी सुरक्षा भी जाँचें।";
+      } else {
+        result.textContent =
+          "लंबा और अनोखा पासवर्ड चुनें।";
+      }
+    }
+  </script>
+</body>
+</html>
